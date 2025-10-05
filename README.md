@@ -8,4 +8,3 @@ Welcome to my GitHub! I'm a passionate learner, builder, and explorer in the wor
 ## 🌐 Find Me Online
 - [LinkedIn](https://www.linkedin.com/in/rudreshrajvansh)
 
-Thanks for stopping by — let's connect and create something awesome!
