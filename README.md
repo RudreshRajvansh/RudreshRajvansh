@@ -6,6 +6,4 @@ Welcome to my GitHub! I'm a passionate learner, builder, and explorer in the wor
 - 🤝 Open to collaboration and contributing to meaningful projects.
 
 ## 🌐 Find Me Online
-- [Leetcode](https://leetcode.com/u/RudreshRajvansh/)
-- [Codeforces](https://codeforces.com/profile/RudreshRajvansh)
-- [HackerRank](https://www.hackerrank.com/profile/rudreshrajvansh0)
+[LeetCode](https://leetcode.com/u/RudreshRajvansh/) | [Codeforces](https://codeforces.com/profile/RudreshRajvansh) | [HackerRank](https://www.hackerrank.com/profile/rudreshrajvansh0)
