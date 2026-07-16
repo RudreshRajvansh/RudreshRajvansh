@@ -20,7 +20,9 @@ I find and close real security gaps in the software I maintain.
 
 ## Elsewhere
 
-[LeetCode](https://leetcode.com/u/RudreshRajvansh/) · [Codeforces](https://codeforces.com/profile/RudreshRajvansh) · [HackerRank](https://www.hackerrank.com/profile/rudreshrajvansh0)
+<a href="https://leetcode.com/u/RudreshRajvansh/"><img src="https://img.shields.io/badge/LeetCode-0d1117?style=flat-square&logo=leetcode&logoColor=CE422B"/></a>
+<a href="https://codeforces.com/profile/RudreshRajvansh"><img src="https://img.shields.io/badge/Codeforces-0d1117?style=flat-square&logo=codeforces&logoColor=3DDC84"/></a>
+<a href="https://www.hackerrank.com/profile/rudreshrajvansh0"><img src="https://img.shields.io/badge/HackerRank-0d1117?style=flat-square&logo=hackerrank&logoColor=CE422B"/></a>
 
 AWS Triple Certified (Solutions Architect, Cloud Practitioner, AI Practitioner) · 14th place, CTF7 (16 flags, including an extreme-difficulty cipher challenge)
 
