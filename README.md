@@ -27,7 +27,10 @@ I find and close real security gaps in the software I maintain.
 AWS Triple Certified (Solutions Architect, Cloud Practitioner, AI Practitioner) · 14th place, CTF7 (16 flags, including an extreme-difficulty cipher challenge)
 
 <br>
-
+<div align="center">
+  <img src="assets/stats.svg" height="165"/>
+</div>
+<br>
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/RudreshRajvansh/RudreshRajvansh/output-3d-contrib/night.svg" />
@@ -35,3 +38,5 @@ AWS Triple Certified (Solutions Architect, Cloud Practitioner, AI Practitioner) 
     <img alt="github profile contributions chart" src="https://raw.githubusercontent.com/RudreshRajvansh/RudreshRajvansh/output-3d-contrib/day.svg" width="100%"/>
   </picture>
 </p>
+
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=RudreshRajvansh&layout=pie&hide_title=true&langs_count=8&hide_values=true&theme=transparent)](https://github-stats-extended.vercel.app/api/top-langs?username=RudreshRajvansh&layout=pie&hide_title=true&langs_count=8&hide_values=true&theme=transparent)
