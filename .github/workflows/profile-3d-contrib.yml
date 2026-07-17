@@ -1,12 +1,11 @@
-name: generate 3d chart for profile contributions
+name: update readme stats cards
 
 on:
   schedule:
-    - cron: "0 */24 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [main]
 
 permissions:
   contents: write
@@ -14,21 +13,25 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v5
-      - uses: yoshi389111/github-profile-3d-contrib@latest
-        env:
-          # PAT with 'repo' scope — required to read private repo activity.
-          # The default GITHUB_TOKEN can't see outside this repo, so it can't count private contributions.
-          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: conf/github-profile-3d-contrib.json
+      - uses: actions/checkout@v6
 
-      - name: push SVGs to the output-3d-contrib branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
         with:
-          target_branch: output-3d-contrib
-          build_dir: profile-3d-contrib
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=CE422B&icon_color=3DDC84&text_color=c9d1d9
+          path: assets/stats.svg
+          token: ${{ secrets.PROFILE_TOKEN }}
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add assets/stats.svg
+          if git diff --staged --quiet; then
+            echo "no changes"
+          else
+            git commit -m "update stats cards"
+            git push
+          fi
