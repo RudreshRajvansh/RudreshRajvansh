@@ -30,6 +30,12 @@ AWS Triple Certified (Solutions Architect, Cloud Practitioner, AI Practitioner) 
 <div align="center">
   <img src="assets/stats.svg" height="165"/>
 </div>
+
+<br>
+<div align="center">
+  <img src="assets/stats.svg" height="165"/>
+  <img src="assets/top-langs.svg" height="165"/>
+</div>
 <br>
 <p align="center">
   <picture>
@@ -39,4 +45,4 @@ AWS Triple Certified (Solutions Architect, Cloud Practitioner, AI Practitioner) 
   </picture>
 </p>
 
-[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=RudreshRajvansh&layout=pie&hide_title=true&langs_count=8&hide_values=true&theme=transparent)](https://github-stats-extended.vercel.app/api/top-langs?username=RudreshRajvansh&layout=pie&hide_title=true&langs_count=8&hide_values=true&theme=transparent)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=RudreshRajvansh&layout=pie&hide_title=true&langs_count=6&hide_values=true&theme=transparent)](https://github-stats-extended.vercel.app/api/top-langs?username=RudreshRajvansh&layout=pie&hide_title=true&langs_count=6&hide_values=true&theme=transparent)
