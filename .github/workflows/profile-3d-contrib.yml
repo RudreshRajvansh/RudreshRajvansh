@@ -1,11 +1,12 @@
-name: update readme stats cards
+name: generate 3d chart for profile contributions
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 18 * * *"
   workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -13,25 +14,21 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v5
+      - uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          # PROFILE_TOKEN has repo + read:user scope — this is what makes
+          # the language pie chart see your private repos (Kotlin included).
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: conf/github-profile-3d-contrib.json
 
-      - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@v2
+      - name: push SVGs to the output-3d-contrib branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=CE422B&icon_color=3DDC84&text_color=c9d1d9
-          path: assets/stats.svg
-          token: ${{ secrets.PROFILE_TOKEN }}
-
-      - name: Commit and push if changed
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add assets/stats.svg
-          if git diff --staged --quiet; then
-            echo "no changes"
-          else
-            git commit -m "update stats cards"
-            git push
-          fi
+          target_branch: output-3d-contrib
+          build_dir: profile-3d-contrib
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
