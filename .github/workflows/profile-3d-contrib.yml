@@ -17,11 +17,10 @@ jobs:
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v5
-      - uses: gumbobr0t/github-profile-3d-contrib@latest
+      - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
-          # This fork reads the secret name directly as GH_TOKEN — it must
-          # be created with exactly this name, unlike the original tool.
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          # PROFILE_TOKEN has repo + read:user scope — already set up correctly.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: conf/github-profile-3d-contrib.json
 
