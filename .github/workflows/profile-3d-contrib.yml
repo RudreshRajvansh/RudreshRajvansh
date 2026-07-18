@@ -17,11 +17,11 @@ jobs:
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v5
-      - uses: yoshi389111/github-profile-3d-contrib@latest
+      - uses: gumbobr0t/github-profile-3d-contrib@latest
         env:
-          # PROFILE_TOKEN has repo + read:user scope — this is what makes
-          # the language pie chart see your private repos (Kotlin included).
-          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+          # This fork reads the secret name directly as GH_TOKEN — it must
+          # be created with exactly this name, unlike the original tool.
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: conf/github-profile-3d-contrib.json
 
